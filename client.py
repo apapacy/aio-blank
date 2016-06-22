@@ -27,6 +27,7 @@ async def get_reddit_top(subreddit, client):
 def signal_handler(signal, frame):
     loop.stop()
     client.close()
+    print('555555555555555555555')
     sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
@@ -34,4 +35,4 @@ signal.signal(signal.SIGINT, signal_handler)
 asyncio.ensure_future(get_reddit_top('python', client))
 asyncio.ensure_future(get_reddit_top('programming', client))
 asyncio.ensure_future(get_reddit_top('compsci', client))
-loop.run_forever()  
+loop.run_forever()
