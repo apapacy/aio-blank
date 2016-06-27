@@ -1,7 +1,7 @@
 <?php
 require 'php-cassandra/php-cassandra.php';
 $nodes = [
-    '127.0.0.1',        // simple way, hostname only
+     '127.0.0.4'        // simple way, hostname only
 /*    '192.168.0.2:9042', // simple way, hostname with port
     [               // advanced way, array including username, password and socket options
         'host'      => '10.205.48.70',
@@ -31,7 +31,7 @@ $nodes = [
 ];
 
 // Create a connection.
-$connection = new Cassandra\Connection($nodes, 'mykeyspace');
+$connection = new Cassandra\Connection($nodes, 'test');
 
 //Connect
 try
@@ -44,11 +44,12 @@ catch (Cassandra\Exception $e)
     exit;//if connect failed it may be good idea not to continue
 }
 $begin = time();
+echo $begin;
 try
 {
   for ($i=0; $i < 10000000;$i++) {
-    $statement = $connection->queryAsync(
-    "INSERT INTO users (user_id,  fname, lname) VALUES ($i, 'john-$i', 'smith-$i')");
+    $statement = $connection->querySync(
+    "INSERT INTO users (twitter_id,  followers) VALUES ('john-$i', {'john-$i': 'smith-$i'})");
   }
 
 }

@@ -1,0 +1,25 @@
+{
+  "name": "aio-blank",
+  "version": "0.0.0",
+  "description": "https://habrahabr.ru/post/242541/ sudo add-apt-repository ppa:fkrull/deadsnakes sudo apt-get update sudo apt-get install python3.5 python3.5-dev sudo python3.5 -m pip install aiohttp sudo python3.5 -m pip install aiocouchdb",
+  "main": "index.js",
+  "dependencies": {
+    "node": "~0.0.0",
+    "n": "~2.1.1",
+    "npm": "~3.10.2",
+    "mongodb": "~2.1.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apapacy/aio-blank.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/apapacy/aio-blank/issues"
+  }
+}

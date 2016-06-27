@@ -1,0 +1,12 @@
+{
+    "name": "apapacy/aio-blank",
+    "authors": [
+        {
+            "name": "apapacy",
+            "email": "apapacy@gmail.com"
+        }
+    ],
+    "require": 
+
+	{"mongodb/mongodb":"*"}
+	}
